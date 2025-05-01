@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wander Chronicles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    nav {
+      background: #0b3d91;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1 {
+      color: #0b3d91;
+      font-size: 2rem;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0b3d91;
+      color: white;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form input[type="submit"] {
+      background: #0b3d91;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background: #063074;
+    }
+
+    audio, video {
+      margin-top: 15px;
+      width: 100%;
+      max-width: 600px;
+      display: block;
+    }
+
+    .nav-space {
+      height: 60px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      section {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+    }
+  </style>
+  <script>
+    function showPage(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    window.onload = () => {
+      showPage("home");
+    };
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('destinations')">Destinations</a>
+    <a href="#" onclick="showPage('itinerary')">Itinerary</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+    <a href="#" onclick="showPage('media')">Media</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="active">
+    <h1>Welcome to Wander Chronicles</h1>
+    <p>
+      Join me as I explore the world one adventure at a time! Discover hidden gems,
+      vibrant <strong>Culture</strong>, breathtaking <strong>Nature</strong>, and thrilling
+      <strong>Adventure</strong> through my journeys.
+    </p>
+    <ul>
+      <li><a href="#" onclick="showPage('destinations')">Top Destinations</a></li>
+      <li><a href="#" onclick="showPage('itinerary')">Sample Itinerary</a></li>
+      <li><a href="#" onclick="showPage('contact')">Get in Touch</a></li>
+      <li><a href="#" onclick="showPage('media')">Travel Media</a></li>
+    </ul>
+  </section>
+
+  <!-- Destinations -->
+  <section id="destinations">
+    <h1>Favorite Travel Destinations</h1>
+    <h2>Nature Escapes</h2>
+    <ul>
+      <li><a href="https://www.nationalgeographic.com/travel/nature" target="_blank">Banff National Park, Canada</a></li>
+      <li><a href="https://www.lonelyplanet.com/indonesia/bali" target="_blank">Bali, Indonesia</a></li>
+      <li><a href="https://www.earthtrekkers.com/patagonia-itinerary/" target="_blank">Patagonia, Chile</a></li>
+    </ul>
+
+    <h2>City Experiences</h2>
+    <ol>
+      <li><a href="https://www.timeout.com/paris" target="_blank">Paris, France</a></li>
+      <li><a href="https://www.japan.travel/en/destinations/kanto/tokyo/" target="_blank">Tokyo, Japan</a></li>
+      <li><a href="https://www.visitnewyork.com/" target="_blank">New York City, USA</a></li>
+    </ol>
+  </section>
+
+  <!-- Itinerary -->
+  <section id="itinerary">
+    <h1>7-Day European Itinerary</h1>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Destination</th>
+        <th>Activities</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Paris</td>
+        <td>Arrive, Eiffel Tower visit</td>
+        <td rowspan="2">Stay at Hotel Eiffel</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Paris</td>
+        <td>Louvre Museum, Seine River Cruise</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Amsterdam</td>
+        <td>Bike tour, Van Gogh Museum</td>
+        <td rowspan="2">Use Eurail for travel</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Amsterdam</td>
+        <td>Canal ride, local markets</td>
+      </tr>
+      <tr>
+        <td colspan="2">Days 5–7</td>
+        <td>Rome – Colosseum, Vatican, Trastevere</td>
+        <td>Book tickets in advance</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h1>Contact the Blogger</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <label for="reason">Reason for Contact:</label>
+      <select id="reason" name="reason">
+        <option value="inquiry">Inquiry</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="feedback">Feedback</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="subscribe" name="subscribe" />
+        Subscribe to newsletter
+      </label>
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </section>
+
+  <!-- Media -->
+  <section id="media">
+    <h1>Travel Media Highlights</h1>
+
+    <h2>Listen to Local Music</h2>
+    <audio controls>
+      <source src="local_music.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <h2>Watch My Latest Trip</h2>
+    <video controls>
+      <source src="travel_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+</body>
+</html>
